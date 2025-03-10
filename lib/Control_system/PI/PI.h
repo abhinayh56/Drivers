@@ -4,7 +4,8 @@
 #include "../../Math_lite/Math_general/Math_general.h"
 
 template <typename T>
-class PI_controller {
+class PI_controller
+{
 public:
 	PI_controller();
 	void init(T dt_, T Kp_, T Ki_, T u_k_1_, T u_max_);

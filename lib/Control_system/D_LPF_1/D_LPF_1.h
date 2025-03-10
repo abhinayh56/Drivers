@@ -5,7 +5,8 @@
 #include "../../Math_lite/Math_general/Math_general.h"
 
 template <typename T>
-class D_LPF_1_controller {
+class D_LPF_1_controller
+{
 public:
 	D_LPF_1_controller();
 	void init(T dt_, T Kd_, T fc_, T u_max_);

@@ -4,7 +4,8 @@
 #include "../../Math_lite/Math_general/Math_general.h"
 
 template <typename T>
-class P_controller {
+class P_controller
+{
 public:
 	P_controller();
 	void init(T Kp_, T u_max_);
