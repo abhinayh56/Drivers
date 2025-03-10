@@ -1,7 +1,7 @@
 #include "PID.h"
 
 template <typename T>
-PID_controller::PID_controller(){
+PID_controller<T>::PID_controller(){
     dt = 0.0;
     Kp = 0.0;
     Ki = 0.0;
@@ -13,13 +13,13 @@ PID_controller::PID_controller(){
 }
 
 template <typename T>
-void PID_controller::init(T dt_, T Kp_, T Ki_, T Kd_, T u_k_1_, T u_max_){
+void PID_controller<T>::init(T dt_, T Kp_, T Ki_, T Kd_, T u_k_1_, T u_max_){
     set_param(dt_, Kp_, Ki_, Kd_, u_k_1_, u_max_);
     start = 0;
 }
 
 template <typename T>
-void PID_controller::set_param(T dt_, T Kp_, T Ki_, T Kd_, T u_k_1_, T u_max_){
+void PID_controller<T>::set_param(T dt_, T Kp_, T Ki_, T Kd_, T u_k_1_, T u_max_){
     dt = dt_;
     Kp = Kp_;
     Ki = Ki_;
@@ -29,7 +29,7 @@ void PID_controller::set_param(T dt_, T Kp_, T Ki_, T Kd_, T u_k_1_, T u_max_){
 }
 
 template <typename T>
-T PID_controller::update(T x_0, T x) {
+T PID_controller<T>::update(T x_0, T x) {
     T e_k = x_0 - x;
 	T u_k = 0.0;
 	if((start==0) || (start==1)){
@@ -39,7 +39,7 @@ T PID_controller::update(T x_0, T x) {
 	else{
 		u_k = u_k_1 + (Kp + Ki*dt + Kd/dt) * e_k - (Kp + 2.0*Kd/dt) * e_k_1 + (Kd / dt) * e_K_2;
 	}
-	u_k = math_fun.saturate(u_k, -u_max, u_max);
+	u_k = Math_general<T>::saturate(u_k, -u_max, u_max);
 	u_k_1 = u_k;
 	e_k_2 = e_k_1;
 	e_k_1 = e_k;
@@ -47,7 +47,7 @@ T PID_controller::update(T x_0, T x) {
 }
 
 template <typename T>
-void PID_controller::reset(){
+void PID_controller<T>::reset(){
     u_k_1 = 0.0;
     e_k_1 = 0.0;
     e_k_2 = 0.0;
@@ -55,76 +55,76 @@ void PID_controller::reset(){
 }
 
 template <typename T>
-void PID_controller::merge(T u_k_1_){
+void PID_controller<T>::merge(T u_k_1_){
     u_k_1 = u_k_1_;
 }
 
 template <typename T>
-void PID_controller::set_dt(T dt_){
+void PID_controller<T>::set_dt(T dt_){
     dt = dt_;
 }
 
 template <typename T>
-void PID_controller::set_Kp(T Kp_){
+void PID_controller<T>::set_Kp(T Kp_){
     Kp = Kp_;
 }
 
 template <typename T>
-void PID_controller::set_Ki(T Ki_){
+void PID_controller<T>::set_Ki(T Ki_){
     Ki = Ki_;
 }
 
 template <typename T>
-void PID_controller::set_Kd(T Kd_){
+void PID_controller<T>::set_Kd(T Kd_){
     Kd = Kd_;
 }
 
 template <typename T>
-void PID_controller::set_u_0(T u_k_1_){
+void PID_controller<T>::set_u_0(T u_k_1_){
     u_k_1 = u_k_1_;
 }
 
 template <typename T>
-void PID_controller::set_u_max(T u_max_){
+void PID_controller<T>::set_u_max(T u_max_){
     u_max = u_max_;
 }
 
 template <typename T>
-T PID_controller::get_dt(){
+T PID_controller<T>::get_dt(){
     return dt;
 }
 
 template <typename T>
-T PID_controller::get_Kp(){
+T PID_controller<T>::get_Kp(){
     return Kp;
 }
 
 template <typename T>
-T PID_controller::get_Ki(){
+T PID_controller<T>::get_Ki(){
     return Ki;
 }
 
 template <typename T>
-T PID_controller::get_Kd(){
+T PID_controller<T>::get_Kd(){
     return Kd;
 }
 
 template <typename T>
-T PID_controller::get_u_k_1(){
+T PID_controller<T>::get_u_k_1(){
     return u_k_1;
 }
 
 template <typename T>
-T PID_controller::get_e_k_1(){
+T PID_controller<T>::get_e_k_1(){
     return e_k_1;
 }
 
 template <typename T>
-T PID_controller::get_e_k_2(){
+T PID_controller<T>::get_e_k_2(){
     return e_k_2;
 }
 
 template <typename T>
-T PID_controller::get_u_max(){
+T PID_controller<T>::get_u_max(){
     return u_max;
 }

@@ -1,7 +1,7 @@
 #ifndef CONTROL_SYSTEM_PID_GS
 #define CONTROL_SYSTEM_PID_GS
 
-#include "../../Math_lite/Math_lite.h"
+#include "../../Math_lite/Math_general/Math_general.h"
 #include "../../Filters/Filters.h"
 
 template <typename T>

@@ -1,7 +1,7 @@
 #ifndef CONTROL_SYSTEM_P
 #define CONTROL_SYSTEM_P
 
-#include "../../Math_lite/Math_lite.h"
+#include "../../Math_lite/Math_general/Math_general.h"
 
 template <typename T>
 class P_controller {
@@ -17,7 +17,6 @@ public:
 	T get_u_max();
 
 private:
-	Math_functions math_fun;
 	T Kp = 0.0;
 	T u_max = 9999999999;
 };

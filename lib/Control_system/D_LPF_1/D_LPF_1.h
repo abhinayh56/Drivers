@@ -2,7 +2,7 @@
 #define CONTROL_SYSTEM_D_LPF_1
 
 #include "../../Constants/Constants.h"
-#include "../../Math_lite/Math_lite.h"
+#include "../../Math_lite/Math_general/Math_general.h"
 
 template <typename T>
 class D_LPF_1_controller {
