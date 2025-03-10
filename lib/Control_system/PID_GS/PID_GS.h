@@ -45,7 +45,6 @@ public:
 
 private:
 	LPF_filter lpf;
-	Math_functions math_fun;
 
 	void update_gain(T Kp_, T Ki_, T Kd_);
 	T interpolate(T x, T x1, T y1, T x2, T y2);

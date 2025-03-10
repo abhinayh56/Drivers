@@ -44,7 +44,6 @@ public:
 
 private:
 	LPF_filter lpf;
-	Math_functions math_fun;
 
 	T dt = 0.0;
 	T Kp = 0.0;

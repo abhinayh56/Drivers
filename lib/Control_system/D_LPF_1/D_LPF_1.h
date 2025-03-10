@@ -26,7 +26,6 @@ public:
 	T get_u_max();
 
 private:
-	Math_functions math_fun;
 	T dt = 0.0;
 	T e_k_1 = 0.0;
 	T Kd = 0.0;
