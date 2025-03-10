@@ -68,6 +68,12 @@ void D_controller<T>::set_Kd(T Kd_)
 }
 
 template <typename T>
+void D_controller<T>::set_u_max(T u_max_)
+{
+	u_max = u_max_;
+}
+
+template <typename T>
 T D_controller<T>::get_dt()
 {
 	return dt;

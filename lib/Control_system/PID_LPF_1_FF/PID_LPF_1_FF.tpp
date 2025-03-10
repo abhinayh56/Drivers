@@ -148,13 +148,13 @@ T PID_LPF_1_FF_controller<T>::get_Kd()
 }
 
 template <typename T>
-T D_LPF_1_controller::get_fc()
+T PID_LPF_1_FF_controller<T>::get_fc()
 {
     return 1.0 / (math_2pi * tau);
 }
 
 template <typename T>
-T D_LPF_1_controller::get_ff()
+T PID_LPF_1_FF_controller<T>::get_ff()
 {
     return u_ff;
 }

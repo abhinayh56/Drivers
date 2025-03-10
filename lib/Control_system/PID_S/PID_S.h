@@ -2,7 +2,7 @@
 #define CONTROL_SYSTEM_PID_S
 
 #include "../../Math_lite/Math_general/Math_general.h"
-#include "../../Filters/Filters.h"
+#include "../../Filters/LPF_1/src/LPF_1.h"
 
 template <typename T>
 class PID_S_controller
@@ -18,8 +18,8 @@ public:
 
 	void set_dt(T dt_);
 	void set_Kp(T Kp_);
-	void set_T_i(T T_i_);
-	void set_T_d(T T_d_);
+	void set_Ti(T T_i_);
+	void set_Td(T T_d_);
 	void set_I_max(T I_max_);
 	void set_u_max(T u_max_);
 	void set_d_filter(bool d_filter_);
@@ -43,7 +43,7 @@ public:
 	T get_e_k_1();
 
 private:
-	LPF_filter lpf;
+	LPF_1<T> lpf;
 
 	T dt = 0.0;
 	T Kp = 0.0;

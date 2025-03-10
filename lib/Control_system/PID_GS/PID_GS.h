@@ -1,8 +1,9 @@
 #ifndef CONTROL_SYSTEM_PID_GS
 #define CONTROL_SYSTEM_PID_GS
 
+#include <stdint.h>
 #include "../../Math_lite/Math_general/Math_general.h"
-#include "../../Filters/Filters.h"
+#include "../../Filters/LPF_1/src/LPF_1.h"
 
 template <typename T>
 class PID_GS_controller
@@ -44,9 +45,9 @@ public:
 	T get_e_k_1();
 
 private:
-	LPF_filter lpf;
+	LPF_1<T> lpf;
 
-	void update_gain(T Kp_, T Ki_, T Kd_);
+	void update_gain(T op_cond_);
 	T interpolate(T x, T x1, T y1, T x2, T y2);
 
 	T dt = 0.0;

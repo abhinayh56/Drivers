@@ -105,13 +105,13 @@ void PID_S_controller<T>::set_Kp(T Kp_)
 }
 
 template <typename T>
-void PID_S_controller<T>::set_Ki(T T_i_)
+void PID_S_controller<T>::set_Ti(T T_i_)
 {
     T_i = T_i_;
 }
 
 template <typename T>
-void PID_S_controller<T>::set_Kd(T T_d_)
+void PID_S_controller<T>::set_Td(T T_d_)
 {
     T_d = T_d_;
 }

@@ -2,7 +2,7 @@
 #define CONTROL_SYSTEM_PID_P
 
 #include "../../Math_lite/Math_general/Math_general.h"
-#include "../../Filters/Filters.h"
+#include "../../Filters/LPF_1/src/LPF_1.h"
 
 template <typename T>
 class PID_P_controller
@@ -43,7 +43,7 @@ public:
 	T get_e_k_1();
 
 private:
-	LPF_filter lpf;
+	LPF_1<T> lpf;
 
 	T dt = 0.0;
 	T Kp = 0.0;
