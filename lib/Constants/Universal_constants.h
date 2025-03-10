@@ -1,0 +1,6 @@
+#ifndef UNIVERSAL_CONSTANTS
+#define UNIVERSAL_CONSTANTS
+
+
+
+#endif
