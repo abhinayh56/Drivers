@@ -1,5 +1,5 @@
-#ifndef MATH_LITE_H
-#define MATH_LITE_H
+#ifndef MATH_GENERAL_H
+#define MATH_GENERAL_H
 
 #include "cmath"
 #include "../Constants/Constants.h"
