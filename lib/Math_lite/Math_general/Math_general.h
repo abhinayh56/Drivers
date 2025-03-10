@@ -1,7 +1,6 @@
 #ifndef MATH_GENERAL_H
 #define MATH_GENERAL_H
 
-#include "cmath"
 #include "../Constants/Constants.h"
 
 template <typename T>
