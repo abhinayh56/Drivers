@@ -25,7 +25,7 @@ void PD_LPF_1_controller<T>::set_param(T dt_, T Kp_, T Kd_, T fc_, T u_max_)
 	dt = dt_;
 	Kp = Kp_;
 	Kd = Kd_;
-	tau = 1.0 / (math_2pi * fc_);
+	tau = 1.0 / (MATH_2_PI * fc_);
 	u_max = u_max_;
 }
 
@@ -83,7 +83,7 @@ void PD_LPF_1_controller<T>::set_Kd(T Kd_)
 template <typename T>
 void PD_LPF_1_controller<T>::set_fc(T fc_)
 {
-	tau = 1.0 / (math_2pi * fc_);
+	tau = 1.0 / (MATH_2_PI * fc_);
 }
 
 template <typename T>
@@ -113,7 +113,7 @@ T PD_LPF_1_controller<T>::get_Kd()
 template <typename T>
 T PD_LPF_1_controller<T>::get_fc()
 {
-	return 1.0 / (math_2pi * tau);
+	return 1.0 / (MATH_2_PI * tau);
 }
 
 template <typename T>
