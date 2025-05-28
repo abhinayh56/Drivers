@@ -111,19 +111,19 @@ inline constexpr VectorN<T, N> VectorN<T, N>::normalize(const VectorN<T, N>& v)
 template <typename T, std::size_t N>
 inline constexpr T VectorN<T, N>::magnitude(const VectorN<T, N>& v)
 {
-    return std::std::sqrt(dot(v, v));
+    return std::sqrt(dot(v, v));
 }
 
 template <typename T, std::size_t N>
 inline constexpr T VectorN<T, N>::length(const VectorN<T, N>& v)
 {
-    return std::std::sqrt(dot(v, v));
+    return std::sqrt(dot(v, v));
 }
 
 template <typename T, std::size_t N>
 inline constexpr T VectorN<T, N>::norm(const VectorN<T, N>& v)
 {
-    return std::std::sqrt(dot(v, v));
+    return std::sqrt(dot(v, v));
 }
 
 template <typename T, std::size_t N>
