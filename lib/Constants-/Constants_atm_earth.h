@@ -1,4 +1,0 @@
-#ifndef CONSTANTS_ATM_EARTH_H
-#define CONSTANTS_ATM_EARTH_H
-
-#endif
