@@ -7,7 +7,7 @@ template <typename T_I2C_bus>
 class I2C_bus
 {
 public:
-	I2C_bus(T_I2C_bus *bus);
+	I2C_bus(T_I2C_bus *bus); 
 
 	void init();
 	void config(uint32_t freq);
