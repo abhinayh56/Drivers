@@ -6,6 +6,11 @@ I2C_bus<T_I2C_bus>::I2C_bus(T_I2C_bus *bus) : bus(bus)
 }
 
 template <typename T_I2C_bus>
+I2C_bus<T_I2C_bus>::~I2C_bus()
+{
+}
+
+template <typename T_I2C_bus>
 void I2C_bus<T_I2C_bus>::init()
 {
 	bus->begin();
@@ -27,7 +32,7 @@ uint8_t I2C_bus<T_I2C_bus>::receive_data(uint8_t address)
 }
 
 template <typename T_I2C_bus>
-void I2C_bus<T_I2C_bus>::receive_data(uint8_t address, uint8_t *buffer, uint8_t length)
+void I2C_bus<T_I2C_bus>::receive_data(uint8_t address, uint8_t *buffer, size_t length)
 {
 	bus->requestFrom((uint8_t)address, length);
 	while (bus->available() < length)
@@ -51,7 +56,7 @@ uint8_t I2C_bus<T_I2C_bus>::receive_data(uint8_t address, uint8_t reg)
 }
 
 template <typename T_I2C_bus>
-void I2C_bus<T_I2C_bus>::receive_data(uint8_t address, uint8_t reg, uint8_t *buffer, uint8_t length)
+void I2C_bus<T_I2C_bus>::receive_data(uint8_t address, uint8_t reg, uint8_t *buffer, size_t length)
 {
 	bus->beginTransmission(address);
 	bus->write(reg);
@@ -74,7 +79,7 @@ void I2C_bus<T_I2C_bus>::send_data(uint8_t address, uint8_t value)
 }
 
 template <typename T_I2C_bus>
-void I2C_bus<T_I2C_bus>::send_data(uint8_t address, uint8_t *buffer, uint8_t length)
+void I2C_bus<T_I2C_bus>::send_data(uint8_t address, const uint8_t *buffer, size_t length)
 {
 	bus->beginTransmission(address);
 	for (uint8_t i = 0; i < length; i++)
@@ -94,7 +99,7 @@ void I2C_bus<T_I2C_bus>::send_data(uint8_t address, uint8_t reg, uint8_t value)
 }
 
 template <typename T_I2C_bus>
-void I2C_bus<T_I2C_bus>::send_data(uint8_t address, uint8_t reg, uint8_t *buffer, uint8_t length)
+void I2C_bus<T_I2C_bus>::send_data(uint8_t address, uint8_t reg, const uint8_t *buffer, size_t length)
 {
 	bus->beginTransmission(address);
 	bus->write(reg);

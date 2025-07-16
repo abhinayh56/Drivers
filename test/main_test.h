@@ -1,4 +1,4 @@
-#define TEST_MPU6050
+// #define TEST_MPU6050
 // #define TEST_HMC5883
 // #define TEST_MS5611
 
@@ -17,6 +17,9 @@
 void setup()
 {
     Serial.begin(115200);
+    Serial1.begin(115200);
+    Serial.write();
+    Serial1.write();
 }
 
 void loop()

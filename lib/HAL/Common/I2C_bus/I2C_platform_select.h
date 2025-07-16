@@ -1,5 +1,5 @@
-#ifndef HAL_I2C_H
-#define HAL_I2C_H
+#ifndef I2C_PLATFORM_SELECT_H
+#define I2C_PLATFORM_SELECT_H
 
 #ifdef ARDUINO_TEENSY41
 #include "../../HAL_teensy/I2C_bus/I2C_bus.tpp"
@@ -14,4 +14,4 @@
 #include ""
 #endif
 
-#endif // HAL_I2C_H
+#endif // I2C_PLATFORM_SELECT_H
