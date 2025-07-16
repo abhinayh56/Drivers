@@ -2,7 +2,7 @@
 #define HAL_I2C_H
 
 #ifdef ARDUINO
-#include "../HAL_arduino/I2C_bus/I2C_bus.tpp"
+#include "../../HAL_arduino/I2C_bus/I2C_bus.tpp"
 
 #elif defined(ESP32)
 #include ""

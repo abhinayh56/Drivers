@@ -1,5 +1,5 @@
 #include "Arduino.h"
-#include "../HAL/Common/I2C_bus.h"
+#include "../HAL/Common/I2C_bus/I2C_bus.h"
 #include "../lib/Drivers/MPU6050/src/MPU6050.h"
 #include <stdint.h>
 #include "Wire.h"

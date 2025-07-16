@@ -1,5 +1,5 @@
 #include "Arduino.h"
-#include "../HAL/Common/I2C_bus.h"
+#include "../HAL/Common/I2C_bus/I2C_bus.h"
 #include "../lib/Drivers/HMC5883/src/HMC5883.h"
 #include <stdint.h>
 #include "Wire.h"

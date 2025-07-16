@@ -1,4 +1,4 @@
-// #define TEST_MPU6050
+#define TEST_MPU6050
 // #define TEST_HMC5883
 // #define TEST_MS5611
 
