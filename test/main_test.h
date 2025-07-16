@@ -13,13 +13,11 @@
 
 #else
 #include <Arduino.h>
+#include "../lib/HAL/Common/UART_bus/UART_bus.h"
 
 void setup()
 {
     Serial.begin(115200);
-    Serial1.begin(115200);
-    Serial.write();
-    Serial1.write();
 }
 
 void loop()

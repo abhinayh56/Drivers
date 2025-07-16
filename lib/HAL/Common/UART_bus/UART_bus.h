@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stddef.h>
+#include <WString.h>
 
 namespace UART_param
 {
@@ -36,7 +37,7 @@ namespace UART_param
 
     enum Flow_control : uint8_t
     {
-        NONE = 0,
+        NO_FLOW_CONTROL = 0,
         HARDWARE = 1,
         SOFTWARE = 2
     };
@@ -54,7 +55,7 @@ namespace UART_param
         uint8_t data_bits = UART_param::Data_bits::BITS_8;
         uint8_t stop_bits = UART_param::Stop_bits::BITS_1;
         uint8_t parity = UART_param::Parity::NONE;
-        uint8_t flow_control = UART_param::Flow_control::NONE;
+        uint8_t flow_control = UART_param::Flow_control::NO_FLOW_CONTROL;
         uint8_t mode = UART_param::Mode::TRANSMIT_RECEIVE;
     };
 }
@@ -77,8 +78,6 @@ public:
     void    send_data(uint8_t value);
     void    send_data(const uint8_t *buffer, size_t length);
 
-    void    print(const String &data);
-    void    print(const String &data);
     void    print(uint8_t data);
     void    print(int8_t data);
     void    print(uint16_t data);
@@ -87,12 +86,43 @@ public:
     void    print(int32_t data);
     void    print(uint64_t data);
     void    print(int64_t data);
+    void    print(float data);
+    void    print(double data);
     void    print(int data);
     void    print(unsigned int data);
-    void    print(long data);
-    void    print(unsigned long data);
+    void    print(const String &data);
+    void    print(char data);
 
-    void    println();
+    void    println(uint8_t data);
+    void    println(int8_t data);
+    void    println(uint16_t data);
+    void    println(int16_t data);
+    void    println(uint32_t data);
+    void    println(int32_t data);
+    void    println(uint64_t data);
+    void    println(int64_t data);
+    void    println(float data);
+    void    println(double data);
+    void    println(int data);
+    void    println(unsigned int data);
+    void    println(const String &data);
+    void    println(char data);
+    
+    void    print(unsigned char data, int base);
+    void    print(int data, int base);
+    void    print(unsigned int data, int base);
+    void    print(long data, int base);
+    void    print(unsigned long data, int base);
+    void    print(int64_t data, int base);
+    void    print(uint64_t data, int base);
+
+    void    println(unsigned char data, int base);
+    void    println(int data, int base);
+    void    println(unsigned int data, int base);
+    void    println(long data, int base);
+    void    println(unsigned long data, int base);
+    void    println(int64_t data, int base);
+    void    println(uint64_t data, int base);
 
 private:
     T_UART_bus *bus;
@@ -101,7 +131,7 @@ private:
                                UART_param::Data_bits::BITS_8,
                                UART_param::Stop_bits::BITS_1,
                                UART_param::Parity::NONE,
-                               UART_param::Flow_control::NONE,
+                               UART_param::Flow_control::NO_FLOW_CONTROL,
                                UART_param::Mode::TRANSMIT_RECEIVE};
 };
 
