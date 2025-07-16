@@ -24,7 +24,7 @@ void HMC5883<T_I2C_bus>::config()
 template <typename T_I2C_bus>
 void HMC5883<T_I2C_bus>::get_mag(int16_t* mg_x, int16_t* mg_y, int16_t* mg_z)
 {
-    i2c_bus->read_registers(address,(uint8_t)HMC5883_INFO::REGISTER::DATA_OUT_X_MSB, buff, (uint8_t)6);
+    i2c_bus->receive_data(address,(uint8_t)HMC5883_INFO::REGISTER::DATA_OUT_X_MSB, buff, (uint8_t)6);
     *mg_x = ((int16_t)buff[0] << 8) | buff[1];
     *mg_z = ((int16_t)buff[2] << 8) | buff[3];
     *mg_y = ((int16_t)buff[4] << 8) | buff[5];
@@ -33,7 +33,7 @@ void HMC5883<T_I2C_bus>::get_mag(int16_t* mg_x, int16_t* mg_y, int16_t* mg_z)
 template <typename T_I2C_bus>
 void HMC5883<T_I2C_bus>::get_data(int16_t* mg_x, int16_t* mg_y, int16_t* mg_z)
 {
-    i2c_bus->read_registers(address,(uint8_t)HMC5883_INFO::REGISTER::DATA_OUT_X_MSB, buff, (uint8_t)6);
+    i2c_bus->receive_data(address,(uint8_t)HMC5883_INFO::REGISTER::DATA_OUT_X_MSB, buff, (uint8_t)6);
     *mg_x = ((int16_t)buff[0] << 8) | buff[1];
     *mg_z = ((int16_t)buff[2] << 8) | buff[3];
     *mg_y = ((int16_t)buff[4] << 8) | buff[5];
@@ -42,13 +42,13 @@ void HMC5883<T_I2C_bus>::get_data(int16_t* mg_x, int16_t* mg_y, int16_t* mg_z)
 template <typename T_I2C_bus>
 void HMC5883<T_I2C_bus>::set_bit_val(uint8_t reg, uint8_t bit_mask, uint8_t bit_lcn_0, uint8_t bit_val)
 {
-    uint8_t register_val = i2c_bus->read_register(address, reg);
+    uint8_t register_val = i2c_bus->receive_data(address, reg);
     register_val = (register_val & (~bit_mask)) | (bit_val<<bit_lcn_0);
-    i2c_bus->write_register(address, reg, register_val);
+    i2c_bus->send_data(address, reg, register_val);
 }
 
 template <typename T_I2C_bus>
 uint8_t HMC5883<T_I2C_bus>::get_bit_val(uint8_t reg, uint8_t bit_mask, uint8_t bit_lcn_0)
 {
-    return ((i2c_bus->read_register(address, reg)) & bit_mask) >> bit_lcn_0;
+    return ((i2c_bus->receive_data(address, reg)) & bit_mask) >> bit_lcn_0;
 }
