@@ -158,17 +158,17 @@ template <typename T_I2C_bus>
 void MS5611<T_I2C_bus>::read_prom()
 {
     uint8_t buff[2];
-    i2c_bus->read_registers(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_1, buff, 2);
+    i2c_bus->receive_data(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_1, buff, 2);
     C1 = ((uint16_t)buff[0] << 8) | buff[1];
-    i2c_bus->read_registers(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_2, buff, 2);
+    i2c_bus->receive_data(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_2, buff, 2);
     C2 = ((uint16_t)buff[0] << 8) | buff[1];
-    i2c_bus->read_registers(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_3, buff, 2);
+    i2c_bus->receive_data(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_3, buff, 2);
     C3 = ((uint16_t)buff[0] << 8) | buff[1];
-    i2c_bus->read_registers(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_4, buff, 2);
+    i2c_bus->receive_data(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_4, buff, 2);
     C4 = ((uint16_t)buff[0] << 8) | buff[1];
-    i2c_bus->read_registers(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_5, buff, 2);
+    i2c_bus->receive_data(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_5, buff, 2);
     C5 = ((uint16_t)buff[0] << 8) | buff[1];
-    i2c_bus->read_registers(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_6, buff, 2);
+    i2c_bus->receive_data(address, (uint8_t)MS5611_INFO::COMMAND::PROM_READ_6, buff, 2);
     C6 = ((uint16_t)buff[0] << 8) | buff[1];
 }
 
@@ -188,7 +188,7 @@ template <typename T_I2C_bus>
 uint32_t MS5611<T_I2C_bus>::read_adc()
 {
     uint8_t buff[3];
-    i2c_bus->read_registers(address, (uint8_t)(uint8_t)MS5611_INFO::COMMAND::ADC_READ, buff, 3);
+    i2c_bus->receive_data(address, (uint8_t)(uint8_t)MS5611_INFO::COMMAND::ADC_READ, buff, 3);
     uint32_t adc_val = ((uint32_t)buff[0])<<16 | ((uint32_t)buff[1])<<8 | buff[2];
     return adc_val;
 }
