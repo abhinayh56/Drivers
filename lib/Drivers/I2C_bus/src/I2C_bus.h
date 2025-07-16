@@ -20,14 +20,14 @@ public:
 	void receive_data(uint8_t address, uint8_t *buffer, uint8_t length);
 
 	// uint8_t receive_data(uint8_t address);
-	// void receive_data(uint8_t address, uint8_t *buffer, uint8_t length);
+	// void    receive_data(uint8_t address, uint8_t *buffer, uint8_t length);
 	// uint8_t receive_data(uint8_t address, uint8_t reg);
-	// void receive_data(uint8_t address, uint8_t reg, uint8_t *buffer, uint8_t length);
+	// void    receive_data(uint8_t address, uint8_t reg, uint8_t *buffer, uint8_t length);
 
-	// void send_data(uint8_t address, uint8_t value);
-	// void send_data(uint8_t address, uint8_t *buffer, uint8_t length);
-	// void send_data(uint8_t address, uint8_t reg, uint8_t value);
-	// void send_data(uint8_t address, uint8_t reg, uint8_t *values, uint8_t length);
+	// void    send_data(uint8_t address, uint8_t value);
+	// void    send_data(uint8_t address, uint8_t *buffer, uint8_t length);
+	// void    send_data(uint8_t address, uint8_t reg, uint8_t value);
+	// void    send_data(uint8_t address, uint8_t reg, uint8_t *values, uint8_t length);
 
 private:
 	T_I2C_bus *bus;
