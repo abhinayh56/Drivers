@@ -28,10 +28,10 @@ void setup()
 
 void loop()
 {
-    pwm_ch_1.set_duty(50);
+    pwm_ch_1.set_duty(25);
     pwm_ch_2.set_duty(50);
-    pwm_ch_3.set_duty(50);
-    pwm_ch_4.set_duty(50);
+    pwm_ch_3.set_duty(75);
+    pwm_ch_4.set_duty(95);
 
     delay(5000);
 }
