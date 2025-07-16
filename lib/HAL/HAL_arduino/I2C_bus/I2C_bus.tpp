@@ -32,7 +32,6 @@ uint8_t I2C_bus<T_I2C_bus>::receive_data(uint8_t address)
 template <typename T_I2C_bus>
 void I2C_bus<T_I2C_bus>::receive_data(uint8_t address, uint8_t *buffer, uint8_t length)
 {
-	bus->beginTransmission(address);
 	bus->requestFrom((uint8_t)address, (uint8_t)length);
 	while (bus->available() < length)
 		;
@@ -40,7 +39,7 @@ void I2C_bus<T_I2C_bus>::receive_data(uint8_t address, uint8_t *buffer, uint8_t 
 	{
 		buffer[i] = bus->read();
 	}
-	bus->endTransmission(address);
+	bus->endTransmission();
 }
 
 template <typename T_I2C_bus>

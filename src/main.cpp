@@ -1,9 +1,8 @@
 #include "Arduino.h"
 #include "../HAL/Common/I2C_bus.h"
 #include "../lib/Drivers/MS5611/src/MS5611.h"
-
-#include "Wire.h"
 #include <stdint.h>
+#include "Wire.h"
 
 I2C_bus<TwoWire> i2c_bus(&Wire);
 MS5611<I2C_bus<TwoWire>> bar(&i2c_bus, (uint8_t)MS5611_INFO::ADDR::I2C_DEFAULT);
