@@ -26,6 +26,6 @@ private:
 	T_I2C_bus *bus;
 };
 
-#include "I2C_bus.tpp"
+#include "I2C_platform_select.h"
 
 #endif

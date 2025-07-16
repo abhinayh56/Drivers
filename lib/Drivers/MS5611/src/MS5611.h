@@ -2,7 +2,7 @@
 #define MS5611_H
 
 #include <stdint.h>
-#include "../../Utility/src/Utility.h"
+#include "../Utility/Utility.h"
 #include "MS5611_reg.h"
 
 template <typename T_I2C_bus>

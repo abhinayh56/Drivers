@@ -1,14 +1,15 @@
 #include "Arduino.h"
-#include "../Drivers/I2C_bus/src/I2C_bus.h"
-#include "../Drivers/MS5611/src/MS5611.h"
+#include "../HAL/Common/I2C_bus.h"
+#include "../lib/Drivers/MS5611/src/MS5611.h"
+
 #include "Wire.h"
 #include <stdint.h>
 
 I2C_bus<TwoWire> i2c_bus(&Wire);
 MS5611<I2C_bus<TwoWire>> bar(&i2c_bus, (uint8_t)MS5611_INFO::ADDR::I2C_DEFAULT);
 
-float SampleFrequency = 500.0, dt = 1.0/SampleFrequency;
-unsigned long loop_timer = 1000000.0*dt, t;
+float SampleFrequency = 500.0, dt = 1.0 / SampleFrequency;
+unsigned long loop_timer = 1000000.0 * dt, t;
 
 double press = 0;
 double temp = 0;
