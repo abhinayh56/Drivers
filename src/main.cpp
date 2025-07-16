@@ -15,7 +15,7 @@ double temp = 0;
 
 unsigned long t_n = 0;
 
-void wait();
+void wait(); 
 
 void setup()
 {
