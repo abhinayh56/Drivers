@@ -11,7 +11,8 @@
 #include "../../HAL_arduino/UART_bus/UART_bus.tpp"
 
 #else
-#include ""
+#error "No UART implementation defined for this platform"
+
 #endif
 
 #endif // UART_PLATFORM_SELECT_H

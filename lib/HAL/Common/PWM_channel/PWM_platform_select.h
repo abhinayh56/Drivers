@@ -11,7 +11,8 @@
 #include "../../HAL_arduino/PWM_channel/PWM_channel.tpp"
 
 #else
-#include ""
+#error "No PWM_channel implementation defined for this platform"
+
 #endif
 
 #endif // PWM_PLATFORM_SELECT_H

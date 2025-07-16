@@ -11,7 +11,8 @@
 #include "../../HAL_arduino/I2C_bus/I2C_bus.tpp"
 
 #else
-#include ""
+#error "No I2C implementation defined for this platform"
+
 #endif
 
 #endif // I2C_PLATFORM_SELECT_H
