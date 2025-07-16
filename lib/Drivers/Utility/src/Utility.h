@@ -6,38 +6,38 @@ namespace BIT
 {
     enum class MASK32 : uint32_t
     {
-        BIT_0  = (1 << 0),
-        BIT_1  = (1 << 1),
-        BIT_2  = (1 << 2),
-        BIT_3  = (1 << 3),
-        BIT_4  = (1 << 4),
-        BIT_5  = (1 << 5),
-        BIT_6  = (1 << 6),
-        BIT_7  = (1 << 7),
-        BIT_8  = (1 << 8),
-        BIT_9  = (1 << 9),
-        BIT_10 = (1 << 10),
-        BIT_11 = (1 << 11),
-        BIT_12 = (1 << 12),
-        BIT_13 = (1 << 13),
-        BIT_14 = (1 << 14),
-        BIT_15 = (1 << 15),
-        BIT_16 = (1 << 16),
-        BIT_17 = (1 << 17),
-        BIT_18 = (1 << 18),
-        BIT_19 = (1 << 19),
-        BIT_20 = (1 << 20),
-        BIT_21 = (1 << 21),
-        BIT_22 = (1 << 22),
-        BIT_23 = (1 << 23),
-        BIT_24 = (1 << 24),
-        BIT_25 = (1 << 25),
-        BIT_26 = (1 << 26),
-        BIT_27 = (1 << 27),
-        BIT_28 = (1 << 28),
-        BIT_29 = (1 << 29),
-        BIT_30 = (1 << 30),
-        // BIT_31 = (1 << 31),
+        BIT_0  = (1U << 0),
+        BIT_1  = (1U << 1),
+        BIT_2  = (1U << 2),
+        BIT_3  = (1U << 3),
+        BIT_4  = (1U << 4),
+        BIT_5  = (1U << 5),
+        BIT_6  = (1U << 6),
+        BIT_7  = (1U << 7),
+        BIT_8  = (1U << 8),
+        BIT_9  = (1U << 9),
+        BIT_10 = (1U << 10),
+        BIT_11 = (1U << 11),
+        BIT_12 = (1U << 12),
+        BIT_13 = (1U << 13),
+        BIT_14 = (1U << 14),
+        BIT_15 = (1U << 15),
+        BIT_16 = (1U << 16),
+        BIT_17 = (1U << 17),
+        BIT_18 = (1U << 18),
+        BIT_19 = (1U << 19),
+        BIT_20 = (1U << 20),
+        BIT_21 = (1U << 21),
+        BIT_22 = (1U << 22),
+        BIT_23 = (1U << 23),
+        BIT_24 = (1U << 24),
+        BIT_25 = (1U << 25),
+        BIT_26 = (1U << 26),
+        BIT_27 = (1U << 27),
+        BIT_28 = (1U << 28),
+        BIT_29 = (1U << 29),
+        BIT_30 = (1U << 30),
+        BIT_31 = (1U << 31),
 
         BITM1_0  = BIT_0,
         BITM1_1  = BIT_1,
@@ -70,7 +70,7 @@ namespace BIT
         BITM1_28 = BIT_28,
         BITM1_29 = BIT_29,
         BITM1_30 = BIT_30,
-        // BITM1_31 = BIT_31,
+        BITM1_31 = BIT_31,
 
         BITM2_0  = (BITM1_0  | BIT_1),
         BITM2_1  = (BITM1_1  | BIT_2),
@@ -102,7 +102,7 @@ namespace BIT
         BITM2_27 = (BITM1_27 | BIT_28),
         BITM2_28 = (BITM1_28 | BIT_29),
         BITM2_29 = (BITM1_29 | BIT_30),
-        // BITM2_30 = (BITM1_30 | BIT_31),
+        BITM2_30 = (BITM1_30 | BIT_31),
 
         BITM3_0  = (BITM2_0  | BIT_2),
         BITM3_1  = (BITM2_1  | BIT_3),
@@ -133,7 +133,7 @@ namespace BIT
         BITM3_26 = (BITM2_26 | BIT_28),
         BITM3_27 = (BITM2_27 | BIT_29),
         BITM3_28 = (BITM2_28 | BIT_30),
-        // BITM3_29 = (BITM2_29 | BIT_31),
+        BITM3_29 = (BITM2_29 | BIT_31),
 
         BITM4_0  = (BITM3_0  | BIT_3),
         BITM4_1  = (BITM3_1  | BIT_4),
@@ -163,7 +163,7 @@ namespace BIT
         BITM4_25 = (BITM3_25 | BIT_28),
         BITM4_26 = (BITM3_26 | BIT_29),
         BITM4_27 = (BITM3_27 | BIT_30),
-        // BITM4_28 = (BITM3_28 | BIT_31),
+        BITM4_28 = (BITM3_28 | BIT_31),
 
         BITM5_0  = (BITM4_0  | BIT_4),
         BITM5_1  = (BITM4_1  | BIT_5),
@@ -192,7 +192,7 @@ namespace BIT
         BITM5_24 = (BITM4_24 | BIT_28),
         BITM5_25 = (BITM4_25 | BIT_29),
         BITM5_26 = (BITM4_26 | BIT_30),
-        // BITM5_27 = (BITM4_27 | BIT_31),
+        BITM5_27 = (BITM4_27 | BIT_31),
 
         BITM6_0  = (BITM5_0  | BIT_5),
         BITM6_1  = (BITM5_1  | BIT_6),
@@ -220,7 +220,7 @@ namespace BIT
         BITM6_23 = (BITM5_23 | BIT_28),
         BITM6_24 = (BITM5_24 | BIT_29),
         BITM6_25 = (BITM5_25 | BIT_30),
-        // BITM6_26 = (BITM5_26 | BIT_31),
+        BITM6_26 = (BITM5_26 | BIT_31),
 
         BITM7_0  = (BITM6_0  | BIT_6),
         BITM7_1  = (BITM6_1  | BIT_7),
@@ -247,7 +247,7 @@ namespace BIT
         BITM7_22 = (BITM6_22 | BIT_28),
         BITM7_23 = (BITM6_23 | BIT_29),
         BITM7_24 = (BITM6_24 | BIT_30),
-        // BITM7_25 = (BITM6_25 | BIT_31),
+        BITM7_25 = (BITM6_25 | BIT_31),
 
         BITM8_0  = (BITM7_0  | BIT_7),
         BITM8_1  = (BITM7_1  | BIT_8),
@@ -273,7 +273,7 @@ namespace BIT
         BITM8_21 = (BITM7_21 | BIT_28),
         BITM8_22 = (BITM7_22 | BIT_29),
         BITM8_23 = (BITM7_23 | BIT_30),
-        // BITM8_24 = (BITM7_24 | BIT_31),
+        BITM8_24 = (BITM7_24 | BIT_31),
 
         BITM9_0  = (BITM8_0  | BIT_8),
         BITM9_1  = (BITM8_1  | BIT_9),
@@ -298,7 +298,7 @@ namespace BIT
         BITM9_20 = (BITM8_20 | BIT_28),
         BITM9_21 = (BITM8_21 | BIT_29),
         BITM9_22 = (BITM8_22 | BIT_30),
-        // BITM9_23 = (BITM8_23 | BIT_31),
+        BITM9_23 = (BITM8_23 | BIT_31),
         
         BITM10_0  = (BITM9_0  | BIT_9),
         BITM10_1  = (BITM9_1  | BIT_10),
@@ -322,7 +322,7 @@ namespace BIT
         BITM10_19 = (BITM9_19 | BIT_28),
         BITM10_20 = (BITM9_20 | BIT_29),
         BITM10_21 = (BITM9_21 | BIT_30),
-        // BITM10_22 = (BITM9_22 | BIT_31),
+        BITM10_22 = (BITM9_22 | BIT_31),
         
         BITM11_0  = (BITM10_0 | BIT_10),
         BITM11_1  = (BITM10_1 | BIT_11),
@@ -345,7 +345,7 @@ namespace BIT
         BITM11_18 = (BITM10_18| BIT_28),
         BITM11_19 = (BITM10_19| BIT_29),
         BITM11_20 = (BITM10_20| BIT_30),
-        // BITM11_21 = (BITM10_21| BIT_31),
+        BITM11_21 = (BITM10_21| BIT_31),
         
         BITM12_0  = (BITM11_0 | BIT_11),
         BITM12_1  = (BITM11_1 | BIT_12),
@@ -367,7 +367,7 @@ namespace BIT
         BITM12_17 = (BITM11_17| BIT_28),
         BITM12_18 = (BITM11_18| BIT_29),
         BITM12_19 = (BITM11_19| BIT_30),
-        // BITM12_20 = (BITM11_20| BIT_31),
+        BITM12_20 = (BITM11_20| BIT_31),
         
         BITM13_0  = (BITM12_0 | BIT_12),
         BITM13_1  = (BITM12_1 | BIT_13),
@@ -388,7 +388,7 @@ namespace BIT
         BITM13_16 = (BITM12_16| BIT_28),
         BITM13_17 = (BITM12_17| BIT_29),
         BITM13_18 = (BITM12_18| BIT_30),
-        // BITM13_19 = (BITM12_19| BIT_31),
+        BITM13_19 = (BITM12_19| BIT_31),
         
         BITM14_0  = (BITM13_0 | BIT_13),
         BITM14_1  = (BITM13_1 | BIT_14),
@@ -408,7 +408,7 @@ namespace BIT
         BITM14_15 = (BITM13_15| BIT_28),
         BITM14_16 = (BITM13_16| BIT_29),
         BITM14_17 = (BITM13_17| BIT_30),
-        // BITM14_18 = (BITM13_18| BIT_31),
+        BITM14_18 = (BITM13_18| BIT_31),
         
         BITM15_0  = (BITM14_0 | BIT_14),
         BITM15_1  = (BITM14_1 | BIT_15),
@@ -427,7 +427,7 @@ namespace BIT
         BITM15_14 = (BITM14_14| BIT_28),
         BITM15_15 = (BITM14_15| BIT_29),
         BITM15_16 = (BITM14_16| BIT_30),
-        // BITM15_17 = (BITM14_17| BIT_31),
+        BITM15_17 = (BITM14_17| BIT_31),
         
         BITM16_0  = (BITM15_0 | BIT_15),
         BITM16_1  = (BITM15_1 | BIT_16),
@@ -445,7 +445,7 @@ namespace BIT
         BITM16_13 = (BITM15_13| BIT_28),
         BITM16_14 = (BITM15_14| BIT_29),
         BITM16_15 = (BITM15_15| BIT_30),
-        // BITM16_16 = (BITM15_16| BIT_31),
+        BITM16_16 = (BITM15_16| BIT_31),
         
         BITM17_0  = (BITM16_0 | BIT_16),
         BITM17_1  = (BITM16_1 | BIT_17),
@@ -462,7 +462,7 @@ namespace BIT
         BITM17_12 = (BITM16_12| BIT_28),
         BITM17_13 = (BITM16_13| BIT_29),
         BITM17_14 = (BITM16_14| BIT_30),
-        // BITM17_15 = (BITM16_15| BIT_31),
+        BITM17_15 = (BITM16_15| BIT_31),
         
         BITM18_0  = (BITM17_0 | BIT_17),
         BITM18_1  = (BITM17_1 | BIT_18),
@@ -478,7 +478,7 @@ namespace BIT
         BITM18_11 = (BITM17_11| BIT_28),
         BITM18_12 = (BITM17_12| BIT_29),
         BITM18_13 = (BITM17_13| BIT_30),
-        // BITM18_14 = (BITM17_14| BIT_31),
+        BITM18_14 = (BITM17_14| BIT_31),
         
         BITM19_0  = (BITM18_0 | BIT_18),
         BITM19_1  = (BITM18_1 | BIT_19),
@@ -493,7 +493,7 @@ namespace BIT
         BITM19_10 = (BITM18_10| BIT_28),
         BITM19_11 = (BITM18_11| BIT_29),
         BITM19_12 = (BITM18_12| BIT_30),
-        // BITM19_13 = (BITM18_13| BIT_31),
+        BITM19_13 = (BITM18_13| BIT_31),
         
         BITM20_0  = (BITM19_0 | BIT_19),
         BITM20_1  = (BITM19_1 | BIT_20),
@@ -507,7 +507,7 @@ namespace BIT
         BITM20_9  = (BITM19_9 | BIT_28),
         BITM20_10 = (BITM19_10| BIT_29),
         BITM20_11 = (BITM19_11| BIT_30),
-        // BITM20_12 = (BITM19_12| BIT_31),
+        BITM20_12 = (BITM19_12| BIT_31),
         
         BITM21_0  = (BITM20_0 | BIT_20),
         BITM21_1  = (BITM20_1 | BIT_21),
@@ -520,7 +520,7 @@ namespace BIT
         BITM21_8  = (BITM20_8 | BIT_28),
         BITM21_9  = (BITM20_9 | BIT_29),
         BITM21_10 = (BITM20_10| BIT_30),
-        // BITM21_11 = (BITM20_11| BIT_31),
+        BITM21_11 = (BITM20_11| BIT_31),
         
         BITM22_0  = (BITM21_0 | BIT_21),
         BITM22_1  = (BITM21_1 | BIT_22),
@@ -532,7 +532,7 @@ namespace BIT
         BITM22_7  = (BITM21_7 | BIT_28),
         BITM22_8  = (BITM21_8 | BIT_29),
         BITM22_9  = (BITM21_9 | BIT_30),
-        // BITM22_10 = (BITM21_10| BIT_31),
+        BITM22_10 = (BITM21_10| BIT_31),
         
         BITM23_0 = (BITM22_0 | BIT_22),
         BITM23_1 = (BITM22_1 | BIT_23),
@@ -543,7 +543,7 @@ namespace BIT
         BITM23_6 = (BITM22_6 | BIT_28),
         BITM23_7 = (BITM22_7 | BIT_29),
         BITM23_8 = (BITM22_8 | BIT_30),
-        // BITM23_9 = (BITM22_9 | BIT_31),
+        BITM23_9 = (BITM22_9 | BIT_31),
         
         BITM24_0 = (BITM23_0 | BIT_23),
         BITM24_1 = (BITM23_1 | BIT_24),
@@ -553,7 +553,7 @@ namespace BIT
         BITM24_5 = (BITM23_5 | BIT_28),
         BITM24_6 = (BITM23_6 | BIT_29),
         BITM24_7 = (BITM23_7 | BIT_30),
-        // BITM24_8 = (BITM23_8 | BIT_31),
+        BITM24_8 = (BITM23_8 | BIT_31),
         
         BITM25_0 = (BITM24_0 | BIT_24),
         BITM25_1 = (BITM24_1 | BIT_25),
@@ -562,7 +562,7 @@ namespace BIT
         BITM25_4 = (BITM24_4 | BIT_28),
         BITM25_5 = (BITM24_5 | BIT_29),
         BITM25_6 = (BITM24_6 | BIT_30),
-        // BITM25_7 = (BITM24_7 | BIT_31),
+        BITM25_7 = (BITM24_7 | BIT_31),
         
         BITM26_0 = (BITM25_0 | BIT_25),
         BITM26_1 = (BITM25_1 | BIT_26),
@@ -570,34 +570,34 @@ namespace BIT
         BITM26_3 = (BITM25_3 | BIT_28),
         BITM26_4 = (BITM25_4 | BIT_29),
         BITM26_5 = (BITM25_5 | BIT_30),
-        // BITM26_6 = (BITM25_6 | BIT_31),
+        BITM26_6 = (BITM25_6 | BIT_31),
         
         BITM27_0 = (BITM26_0 | BIT_26),
         BITM27_1 = (BITM26_1 | BIT_27),
         BITM27_2 = (BITM26_2 | BIT_28),
         BITM27_3 = (BITM26_3 | BIT_29),
         BITM27_4 = (BITM26_4 | BIT_30),
-        // BITM27_5 = (BITM26_5 | BIT_31),
+        BITM27_5 = (BITM26_5 | BIT_31),
         
         BITM28_0 = (BITM27_0 | BIT_27),
         BITM28_1 = (BITM27_1 | BIT_28),
         BITM28_2 = (BITM27_2 | BIT_29),
         BITM28_3 = (BITM27_3 | BIT_30),
-        // BITM28_4 = (BITM27_4 | BIT_31),
+        BITM28_4 = (BITM27_4 | BIT_31),
         
         BITM29_0 = (BITM28_0 | BIT_28),
         BITM29_1 = (BITM28_1 | BIT_29),
         BITM29_2 = (BITM28_2 | BIT_30),
-        // BITM29_3 = (BITM28_3 | BIT_31),
+        BITM29_3 = (BITM28_3 | BIT_31),
         
         BITM30_0 = (BITM29_0 | BIT_29),
         BITM30_1 = (BITM29_1 | BIT_30),
-        // BITM30_2 = (BITM29_2 | BIT_31),
+        BITM30_2 = (BITM29_2 | BIT_31),
         
         BITM31_0 = (BITM30_0 | BIT_30),
-        // BITM31_1 = (BITM30_1 | BIT_31),
+        BITM31_1 = (BITM30_1 | BIT_31),
         
-        // BITM32_0 = (BITM31_0 | BIT_31)
+        BITM32_0 = (BITM31_0 | BIT_31)
     };
 
     enum class MASK16 : uint16_t
