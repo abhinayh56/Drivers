@@ -2,7 +2,6 @@
 #define ISR_CHANNEL_H
 
 #include <stdint.h>
-#include <Arduino.h>
 
 namespace ISR_channel_param
 {
@@ -13,6 +12,14 @@ namespace ISR_channel_param
         EDGE_CHANGING = 2,
         EDGE_HIGH = 3,
         EDGE_LOW = 4
+    };
+
+    enum Input_type : uint8_t
+    {
+        TYPE_DISABLE = 0,
+        TYPE_DEFAULT = 1,
+        TYPE_PULLDOWN = 2,
+        TYPE_PULLUP = 3
     };
 }
 
@@ -25,7 +32,7 @@ public:
 
     void init();
 
-    bool config(uint8_t isr_pin_, void (*isr_function)(), int mode, int invert = false);
+    bool config(uint8_t isr_pin_, void (*isr_function)(), int transition, int = false);
 
 private:
     T_ISR_channel *isr_ch;

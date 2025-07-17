@@ -12,7 +12,7 @@ void isr_fun_1();
 void setup()
 {
     Serial.begin(115200);
-    isr_channel_1.config(isr_pin_1, isr_fun_1, ISR_channel_param::Trigger::EDGE_RISING);
+    isr_channel_1.config(isr_pin_1, isr_fun_1, ISR_channel_param::Trigger::EDGE_CHANGING, ISR_channel_param::Input_type::TYPE_DEFAULT);
     delay(5000);
     Serial.println(count);
 }
