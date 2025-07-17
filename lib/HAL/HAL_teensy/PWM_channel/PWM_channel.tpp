@@ -25,7 +25,7 @@ bool PWM_channel<T_PWM>::config(uint8_t pwm_ch_, uint32_t frequency_hz_, uint32_
     resolution_bit = resolution_bit_;
     time_period_us = 1000000.0 / (double)frequency_hz;
 
-    analogWriteFrequency(*pwm, frequency_hz);
+    analogWriteFrequency(pwm_ch, frequency_hz);
     analogWriteResolution(resolution_bit);
     pinMode(pwm_ch, OUTPUT);
     analogWrite(pwm_ch, pwm_to_bit_val(0));
