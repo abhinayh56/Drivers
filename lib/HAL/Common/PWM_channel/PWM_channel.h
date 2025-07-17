@@ -11,12 +11,13 @@ public:
     ~PWM_channel();
 
     void init();
-    bool config(uint32_t frequency_hz_, uint32_t resolution_bit_);
-    void set_pwm(double pwm_us_);
+    bool config(uint8_t pwm_ch_, uint32_t frequency_hz_, uint32_t resolution_bit_);
+    void set_pwm_us(double pwm_us_);
     void set_duty(double duty_percent_);
 
 private:
     T_PWM *pwm;
+    uint8_t pwm_ch;
     uint32_t frequency_hz = 400;
     uint32_t resolution_bit = 15;
     double time_period_us = 2500;

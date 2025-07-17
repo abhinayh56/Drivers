@@ -18,10 +18,10 @@ void setup()
     pwm_ch_3.init();
     pwm_ch_4.init();
 
-    pwm_ch_1.config(400, 15);
-    pwm_ch_2.config(400, 15);
-    pwm_ch_3.config(400, 15);
-    pwm_ch_4.config(400, 15);
+    pwm_ch_1.config(2, 400, 15);
+    pwm_ch_2.config(3, 400, 15);
+    pwm_ch_3.config(5, 400, 15);
+    pwm_ch_4.config(6, 400, 15);
 
     delay(10000);
 }
