@@ -24,26 +24,28 @@ bool ISR_channel<T_ISR_channel>::config(uint8_t isr_pin_, void (*isr_function)()
 
     if (mode == ISR_channel_param::Trigger::EDGE_RISING)
     {
-        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, RISING)
+        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, RISING);
     }
     else if (mode == ISR_channel_param::Trigger::EDGE_FALLING)
     {
-        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, FALLING)
+        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, FALLING);
     }
     else if (mode == ISR_channel_param::Trigger::EDGE_CHANGING)
     {
-        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, CHANGE)
+        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, CHANGE);
     }
     else if (mode == ISR_channel_param::Trigger::EDGE_HIGH)
     {
-        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, HIGH)
+        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, HIGH);
     }
     else if (mode == ISR_channel_param::Trigger::EDGE_LOW)
     {
-        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, LOW)
+        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, LOW);
     }
     else
     {
-        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, CHANGE)
+        attachInterrupt(digitalPinToInterrupt(isr_pin), isr_function, CHANGE);
     }
+
+    return true;
 }

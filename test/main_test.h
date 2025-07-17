@@ -1,8 +1,9 @@
 // #define TEST_MPU6050
 // #define TEST_HMC5883
-#define TEST_MS5611
+// #define TEST_MS5611
 // #define TEST_UART_0
 // #define TEST_PWM
+#define TEST_ISR
 
 // ------------------------------------------------
 #ifdef TEST_MPU6050
@@ -19,6 +20,9 @@
 
 #elif defined(TEST_PWM)
 #include "./test_pwm.h"
+
+#elif defined(TEST_ISR)
+#include "./test_isr.h"
 
 #else
 #include "./test_none.h"
