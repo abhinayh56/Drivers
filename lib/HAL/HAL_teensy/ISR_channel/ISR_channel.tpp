@@ -17,10 +17,18 @@ void ISR_channel<T_ISR_channel>::init()
 }
 
 template <typename T_ISR_channel>
-bool ISR_channel<T_ISR_channel>::config(uint8_t isr_pin_, void (*isr_function)(), int mode)
+bool ISR_channel<T_ISR_channel>::config(uint8_t isr_pin_, void (*isr_function)(), int mode, int invert)
 {
     isr_pin = isr_pin_;
-    pinMode(isr_pin, INPUT_PULLUP);
+
+    if (invert == false)
+    {
+        pinMode(isr_pin, INPUT_PULLDOWN);
+    }
+    else
+    {
+        pinMode(isr_pin, INPUT_PULLUP);
+    }
 
     if (mode == ISR_channel_param::Trigger::EDGE_RISING)
     {

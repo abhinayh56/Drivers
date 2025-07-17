@@ -25,7 +25,7 @@ public:
 
     void init();
 
-    bool config(uint8_t isr_pin_, void (*isr_function)(), int mode);
+    bool config(uint8_t isr_pin_, void (*isr_function)(), int mode, int invert = false);
 
 private:
     T_ISR_channel *isr_ch;
