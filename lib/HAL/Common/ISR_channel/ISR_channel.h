@@ -6,7 +6,7 @@
 
 namespace ISR_channel_param
 {
-    enum Transition : uint8_t
+    enum Trigger : uint8_t
     {
         EDGE_RISING = 0,
         EDGE_FALLING = 1,
@@ -30,8 +30,6 @@ public:
 private:
     T_ISR_channel *isr_ch;
     uint8_t isr_pin;
-
-    void isr_fun();
 };
 
 #include "ISR_platform_select.h"
