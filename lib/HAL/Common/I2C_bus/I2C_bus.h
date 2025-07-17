@@ -15,14 +15,14 @@ public:
 	void config(uint32_t freq);
 
 	uint8_t receive_data(uint8_t address);
-	void    receive_data(uint8_t address, uint8_t *buffer, size_t length);
+	void    receive_data(uint8_t address, uint8_t *buffer, uint32_t length);
 	uint8_t receive_data(uint8_t address, uint8_t reg);
-	void    receive_data(uint8_t address, uint8_t reg, uint8_t *buffer, size_t length);
+	void    receive_data(uint8_t address, uint8_t reg, uint8_t *buffer, uint32_t length);
 
 	void    send_data(uint8_t address, uint8_t value);
-	void    send_data(uint8_t address, const uint8_t *buffer, size_t length);
+	void    send_data(uint8_t address, const uint8_t *buffer, uint32_t length);
 	void    send_data(uint8_t address, uint8_t reg, uint8_t value);
-	void    send_data(uint8_t address, uint8_t reg, const uint8_t *buffer, size_t length);
+	void    send_data(uint8_t address, uint8_t reg, const uint8_t *buffer, uint32_t length);
 
 private:
 	T_I2C_bus *bus;
