@@ -1721,7 +1721,7 @@ Linker script and memory map
 LOAD c:/users/dell/.platformio/packages/toolchain-gccarmnoneeabi-teensy/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+dp/hard/crti.o
 LOAD c:/users/dell/.platformio/packages/toolchain-gccarmnoneeabi-teensy/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+dp/hard/crtbegin.o
 LOAD c:/users/dell/.platformio/packages/toolchain-gccarmnoneeabi-teensy/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+dp/hard/crt0.o
-                0x68823a38                __rtc_localtime = 0x68823a38
+                0x68823a8d                __rtc_localtime = 0x68823a8d
 LOAD .pio\build\teensy41\src\main.cpp.o
 START GROUP
 LOAD .pio\build\teensy41\lib932\libDrivers.a
